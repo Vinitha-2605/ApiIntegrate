@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+<body>
+   <p> Git Details</p>
+   {% if git != None %}
+    <p>Repository:<a href={{git}}>{{repository}}</a></p>
+   {% else %}
+   <p>{{gitdetails}}</p>
+   {% endif %}
+</div>  
