@@ -10,9 +10,19 @@
 </head>
 <body>
    <p> Git Details</p>
-   {% if git != None %}
-    <p>Repository:<a href={{git}}>{{repository}}</a></p>
+   {% if githubrepo is not None %}
+   <p> {{ githubrepo }}
    {% else %}
-   <p>{{gitdetails}}</p>
+   {% if git != None %}
+    <p>Github:<a href={{git}}>{{repository}}</a></p>
+    <p>GitLab:<a href={{gitlab}}>GitlabRepo</a></p>
    {% endif %}
+   {% if errormessage is None %}
+   <h2> Best rating repo </h2>
+   <p> {{messages}} </p>
+   {% else %}
+   <h3> Error Message </h3>
+   <p> {{ errormessage }}
+    {% endif %}
+    {% endif %}
 </div>  
